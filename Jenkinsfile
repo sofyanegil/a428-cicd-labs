@@ -1,16 +1,10 @@
-pipeline {
-    agent any
-    tools {nodejs "node"}
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'npm install' 
-            }
+node {
+    docker.image('node:lts-bullseye-slim').inside('-p 3000:3000') {
+        stage('Build') {      
+            sh 'npm install'     
         }
-        stage('Test') { 
-            steps {
-                sh './jenkins/scripts/test.sh' 
-            }
+        stage('Test') {
+            sh './jenkins/scripts/test.sh' 
         }
     }
-}
+} 
