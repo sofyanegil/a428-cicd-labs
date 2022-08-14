@@ -10,7 +10,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React!!!</h1>
           <h2>Sofyan Egi Lesmana</h2>
-          <p>Submission Proyek Membangun CI Pipeline dengan Jenkins</p>
+          <p>Submission Proyek Membangun CI/CD Pipeline dengan Jenkins</p>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
